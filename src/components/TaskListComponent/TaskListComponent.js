@@ -4,6 +4,7 @@ import styles from "./TaskListComponent.module.css";
 import cx from "classnames";
 import * as tasksActions from "../../redux/tasks/tasksActions";
 import { connect } from "react-redux";
+import * as selectors from "../../redux/selectors/selectors";
 
 const TaskListComponent = ({ tasks, onUpdateCompleted, onDeleteTask }) => (
   <div className={styles.mainWrapper}>
@@ -69,7 +70,7 @@ TaskListComponent.propTypes = {
   tasks: PropTypes.array.isRequired,
 };
 const mapStateToProps = (state) => ({
-  tasks: state.tasks,
+  tasks: selectors.filteredByDateAndName(state),
 });
 
 const mapDispatchToProps = {
