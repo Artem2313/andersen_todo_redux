@@ -10,7 +10,7 @@ export const filteredByDate = createSelector(
   [tasks, filterDate],
   (tasks, filterDate) =>
     tasks.filter((task) => {
-      if (filterDate === null) {
+      if (filterDate === "") {
         return task;
       } else {
         const newDateFromTask = new Date(task.date);

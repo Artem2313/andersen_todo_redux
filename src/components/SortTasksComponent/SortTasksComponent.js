@@ -7,8 +7,6 @@ import * as sortActions from "../../redux/sort/sortActions";
 class SortTasksComponent extends Component {
   static propTypes = {
     onSort: PropTypes.func.isRequired,
-    tasks: PropTypes.array.isRequired,
-    filtered: PropTypes.array.isRequired,
   };
 
   state = {
@@ -24,7 +22,9 @@ class SortTasksComponent extends Component {
       this.setState((prevState) => ({
         sortDirectionNameAsc: !prevState.sortDirectionNameAsc,
       }));
-    } else if (sort === "dateAsc" || sort === "dateDsc") {
+    }
+
+    if (sort === "dateAsc" || sort === "dateDsc") {
       this.setState((prevState) => ({
         sortDirectionDateAsc: !prevState.sortDirectionDateAsc,
       }));

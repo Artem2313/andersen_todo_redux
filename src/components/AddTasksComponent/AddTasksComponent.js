@@ -6,7 +6,7 @@ import styles from "./AddTaskComponent.module.css";
 import cx from "classnames";
 
 class AddTaskComponent extends Component {
-  state = { text: "", date: null, showValidationError: null };
+  state = { text: "", date: "", showValidationError: null };
 
   handleChange = (e) => {
     this.setState({
@@ -18,7 +18,7 @@ class AddTaskComponent extends Component {
     e.preventDefault();
     const { text, date } = this.state;
 
-    if (date === null) {
+    if (date === "") {
       this.setState({
         showValidationError: "Please, set date",
       });
@@ -32,15 +32,9 @@ class AddTaskComponent extends Component {
       return;
     }
 
-    const takenDate = new Date(date);
-
-    const createdDate = `${takenDate.getDate()}/${
-      takenDate.getMonth() + 1
-    }/${takenDate.getFullYear()}`;
-
     const task = {
       text,
-      date: createdDate,
+      date,
       completed: false,
       id: uuidv4(),
     };

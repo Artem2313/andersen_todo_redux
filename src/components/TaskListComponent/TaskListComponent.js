@@ -68,7 +68,6 @@ const TaskListComponent = ({ tasks, onUpdateCompleted, onDeleteTask }) => {
 
 TaskListComponent.propTypes = {
   onDeleteTask: PropTypes.func.isRequired,
-  onUpateCompleted: PropTypes.func.isRequired,
   tasks: PropTypes.array.isRequired,
 };
 const mapStateToProps = (state) => ({
