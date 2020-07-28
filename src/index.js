@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import App from "./components/App";
 import store from "./redux/store";
 import { saveState } from "./redux/localStorage";
+import "./index.css";
 
 store.subscribe(() => {
   saveState({

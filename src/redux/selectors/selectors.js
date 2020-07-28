@@ -4,6 +4,7 @@ export const tasks = (state) => state.tasks;
 
 export const filterName = (state) => state.filterByName;
 export const filterDate = (state) => state.filterByDate;
+export const sortBy = (state) => state.sort;
 
 export const filteredByDate = createSelector(
   [tasks, filterDate],
@@ -32,4 +33,45 @@ export const filteredByDateAndName = createSelector(
     tasks.filter((task) =>
       task.text.toLowerCase().includes(filter.toLowerCase())
     )
+);
+
+export const sortedArray = createSelector(
+  [filteredByDateAndName, sortBy],
+  (tasks, sort) => {
+    let initialTasks = tasks.slice();
+    switch (sort) {
+      case "nameAsc":
+        return initialTasks.slice().sort((a, b) => {
+          const nameA = a.text.toLowerCase();
+          const nameB = b.text.toLowerCase();
+          if (nameA < nameB) return -1;
+          if (nameA > nameB) return 1;
+          return 0;
+        });
+      case "nameDsc":
+        return initialTasks.slice().sort((a, b) => {
+          const nameA = a.text.toLowerCase();
+          const nameB = b.text.toLowerCase();
+          if (nameA > nameB) return -1;
+          if (nameA < nameB) return 1;
+          return 0;
+        });
+      case "dateAsc":
+        return initialTasks.slice().sort((a, b) => {
+          const dateA = a.date;
+          const dateB = b.date;
+          return new Date(dateB) - new Date(dateA);
+        });
+      case "dateDsc":
+        return initialTasks.slice().sort((a, b) => {
+          const dateA = a.date;
+          const dateB = b.date;
+          return new Date(dateA) - new Date(dateB);
+        });
+      case "sortClear":
+        return initialTasks;
+      default:
+        return tasks;
+    }
+  }
 );
