@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/andersen_todo_redux/static/css/main.0e90cb8d.chunk.css",
-    "main.js": "/andersen_todo_redux/static/js/main.6d47a2c5.chunk.js",
-    "main.js.map": "/andersen_todo_redux/static/js/main.6d47a2c5.chunk.js.map",
+    "main.js": "/andersen_todo_redux/static/js/main.17071303.chunk.js",
+    "main.js.map": "/andersen_todo_redux/static/js/main.17071303.chunk.js.map",
     "runtime-main.js": "/andersen_todo_redux/static/js/runtime-main.7ee794fb.js",
     "runtime-main.js.map": "/andersen_todo_redux/static/js/runtime-main.7ee794fb.js.map",
-    "static/js/2.121a251c.chunk.js": "/andersen_todo_redux/static/js/2.121a251c.chunk.js",
-    "static/js/2.121a251c.chunk.js.map": "/andersen_todo_redux/static/js/2.121a251c.chunk.js.map",
+    "static/js/2.19e0e649.chunk.js": "/andersen_todo_redux/static/js/2.19e0e649.chunk.js",
+    "static/js/2.19e0e649.chunk.js.map": "/andersen_todo_redux/static/js/2.19e0e649.chunk.js.map",
     "index.html": "/andersen_todo_redux/index.html",
-    "precache-manifest.dad3dc5ce658e01a8eb94b15bc24686f.js": "/andersen_todo_redux/precache-manifest.dad3dc5ce658e01a8eb94b15bc24686f.js",
+    "precache-manifest.1038a03d3fb38919fd0a93bcf5c8ebb6.js": "/andersen_todo_redux/precache-manifest.1038a03d3fb38919fd0a93bcf5c8ebb6.js",
     "service-worker.js": "/andersen_todo_redux/service-worker.js",
     "static/css/main.0e90cb8d.chunk.css.map": "/andersen_todo_redux/static/css/main.0e90cb8d.chunk.css.map",
-    "static/js/2.121a251c.chunk.js.LICENSE.txt": "/andersen_todo_redux/static/js/2.121a251c.chunk.js.LICENSE.txt"
+    "static/js/2.19e0e649.chunk.js.LICENSE.txt": "/andersen_todo_redux/static/js/2.19e0e649.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7ee794fb.js",
-    "static/js/2.121a251c.chunk.js",
+    "static/js/2.19e0e649.chunk.js",
     "static/css/main.0e90cb8d.chunk.css",
-    "static/js/main.6d47a2c5.chunk.js"
+    "static/js/main.17071303.chunk.js"
   ]
 }
