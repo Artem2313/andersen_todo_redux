@@ -36,6 +36,7 @@ class AddTaskComponent extends Component {
     const task = {
       text,
       date,
+      showDate: date.split("-").reverse().join("-"),
       completed: false,
       id: uuidv4(),
     };

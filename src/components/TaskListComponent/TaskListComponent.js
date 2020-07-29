@@ -39,7 +39,7 @@ const TaskListComponent = ({ tasks, onUpdateCompleted, onDeleteTask }) => {
                   <p className={textDecor}>{task.text}</p>
                 </div>
                 <div>
-                  <p>{task.date}</p>
+                  <p>{task.showDate}</p>
                 </div>
                 <div>
                   <label>
