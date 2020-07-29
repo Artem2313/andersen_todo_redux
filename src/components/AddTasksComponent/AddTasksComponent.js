@@ -14,6 +14,7 @@ class AddTaskComponent extends Component {
     });
   };
 
+  // Хендл менять нельзя т.к. я его повесил и на дейт и на текст
   handleSubmit = (e) => {
     e.preventDefault();
     const { text, date } = this.state;
@@ -42,7 +43,7 @@ class AddTaskComponent extends Component {
     console.log({ ...task });
     this.props.onSubmit({ ...task });
 
-    this.setState({ text: "", date: null, showValidationError: null });
+    this.setState({ text: "", date: "", showValidationError: null });
   };
 
   render() {
@@ -51,6 +52,9 @@ class AddTaskComponent extends Component {
       ? styles.inputError
       : styles.inputSuccess;
     const btnSwitch = showValidationError && styles.btnError;
+
+    const textInput = cx(styles.input, inputSwitch);
+    const addBtn = cx(styles.btn, btnSwitch);
 
     return (
       <div className={styles.mainWrapper}>
@@ -62,9 +66,9 @@ class AddTaskComponent extends Component {
             value={text}
             onChange={this.handleChange}
             placeholder="Write task"
-            className={cx(styles.input, inputSwitch)}
+            className={textInput}
           />
-          <button type="submit" className={cx(styles.btn, btnSwitch)}>
+          <button type="submit" className={addBtn}>
             Add Todo
           </button>
         </form>
